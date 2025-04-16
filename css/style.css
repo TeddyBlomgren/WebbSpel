@@ -1,0 +1,86 @@
+body {
+  font-family: sans-serif;
+  background-color: #f2efe8;
+  text-align: center;
+}
+
+#game {
+  max-width: 600px;
+  margin: auto;
+  border: 2px solid #333;
+  padding: 1em;
+  background-color: white;
+}
+
+#image-area {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 1em;
+  border: 1px solid #aaa;
+  overflow: hidden; 
+}
+
+#event-image {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 80px;
+  display: none;
+  z-index: 5;
+}
+
+#controls button {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  margin: 0.2em;
+}
+
+#map {
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(5, 40px);
+  gap: 4px;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #eee;
+}
+
+.player {
+  background-color: purple;
+  color: white;
+}
+
+.dwarf {
+  background-color: greenyellow;
+  color: white;
+}
+
+.witch {
+  background-color: red;
+  color: white;
+}
+
+.visited-dwarf {
+  background-color: green;
+  color: black;
+}
+
+#witch-direction {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Snövit och Häxan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game">
+    <div id="image-area">
+      <img id="event-image" src="" alt="">
+    </div>
+    <p id="description">Du står vid skogens kant...</p>
+    <p>Snövits position: <span id="position">?, ?</span></p>
+
+    <div id="controls">
+      <div><button onclick="move('N')">↑</button></div>
+      <div>
+        <button onclick="move('V')">←</button>
+        <button onclick="move('S')">↓</button>
+        <button onclick="move('O')">→</button>
+      </div>
+    </div>
+
+    <p id="witch-direction">Häxan hörs från: <span style="color: red;"></span></p>
+    <p>Dvärgar räddade: <span id="rescued">0</span>/7</p>
+    <p>Häxans avstånd: <span id="danger">?</span></p>
+
+    <h2>Karta</h2>
+    <div id="map"></div>
+    <p>Klockan: <span id="clock">--:--:--</span></p>
+
+  </div>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
