@@ -141,7 +141,7 @@ function updateGame() {
     eventImg.style.display = "block";
 
   } else {
-    document.getElementById("description").textContent = "Du går djupare in i skogen...";
+    document.getElementById("description").textContent = "Du går vidare";
   }
 
   if (player.x === witch.x && player.y === witch.y) {
@@ -153,7 +153,7 @@ function updateGame() {
     setTimeout(() => {
       alert("Häxan tog dig! Spelet är slut.");
       location.reload();
-    }, 1000);
+    }, 500);
   
   }
 
@@ -162,7 +162,7 @@ function updateGame() {
     setTimeout(() => {
       alert("Du har räddat alla Dvärgar!");
       location.reload();
-    }, 1000);
+    }, 500);
   }
 
   drawMap();
@@ -174,7 +174,7 @@ function move(direction) {
   else if (direction === 'V' && player.x > 0) player.x--;
   else if (direction === 'O' && player.x < gridSize - 1) player.x++;
 
-  // 25% chans att häxan rör sig närmare
+  // 25% chans att häxan rör sig
   if (Math.random() < 0.25) {
     const dx = player.x - witch.x;
     const dy = player.y - witch.y;
@@ -241,4 +241,4 @@ function getTime() {
 }
 
 getTime(); 
-setInterval(getTime, 100);
+setInterval(getTime, 10000);
